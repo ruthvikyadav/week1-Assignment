@@ -11,9 +11,9 @@ public class ObserverTest {
 
 	public static void main(String[] args) {
 		
-		FirstMessageSubscriber firstSubscriber = new FirstMessageSubscriber();
-		SecondMessageSubscriber secondSubscriber = new SecondMessageSubscriber();
-		ThirdMessageSubscriber thirdSubscriber = new ThirdMessageSubscriber();
+		FirstMessageSubscriber firstSubscriber = new FirstSubscriber();
+		SecondMessageSubscriber secondSubscriber = new SecondSubscriber();
+		ThirdMessageSubscriber thirdSubscriber = new ThirdSubscriber();
 
 		MessagePublisher messagePublisher = new MessagePublisher();
 
