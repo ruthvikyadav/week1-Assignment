@@ -1,9 +1,9 @@
 package com.pattern.client;
 
 import com.pattern.message.Message;
-import com.pattern.observer.impl.FirstMessageSubscriber;
-import com.pattern.observer.impl.SecondMessageSubscriber;
-import com.pattern.observer.impl.ThirdMessageSubscriber;
+import com.pattern.observer.impl.FirstSubscriber;
+import com.pattern.observer.impl.SecondSubscriber;
+import com.pattern.observer.impl.ThirdSubscriber;
 import com.pattern.subject.impl.MessagePublisher;
 
 
@@ -11,22 +11,22 @@ public class ObserverTest {
 
 	public static void main(String[] args) {
 		
-		FirstMessageSubscriber firstMessageSubscriber = new FirstMessageSubscriber();
-		SecondMessageSubscriber secondMessageSubscriber = new SecondMessageSubscriber();
-		ThirdMessageSubscriber thirdMessageSubscriber = new ThirdMessageSubscriber();
+		FirstMessageSubscriber firstSubscriber = new FirstMessageSubscriber();
+		SecondMessageSubscriber secondSubscriber = new SecondMessageSubscriber();
+		ThirdMessageSubscriber thirdSubscriber = new ThirdMessageSubscriber();
 
 		MessagePublisher messagePublisher = new MessagePublisher();
 
-		messagePublisher.register(firstMessageSubscriber);
-		messagePublisher.register(secondMessageSubscriber);
+		messagePublisher.register(firstSubscriber);
+		messagePublisher.register(secondSubscriber);
 
-		messagePublisher.notifyUpdate(new Message("This is primary notification"));
-		System.out.println("-------------------xxxxxx--------------------------------------------");
+		messagePublisher.notifyUpdate(new Message("This   primary notifications"));
+		System.out.println("------------------- --------------------------------------------");
 
-		messagePublisher.unregister(firstMessageSubscriber);
+		messagePublisher.unregister(firstSubscriber);
 	
-		messagePublisher.register(thirdMessageSubscriber);
+		messagePublisher.register(thirdSubscriber);
 
-		messagePublisher.notifyUpdate(new Message("This is Secondary notification"));
+		messagePublisher.notifyUpdate(new Message("This  Second  notification"));
 	}
 }
