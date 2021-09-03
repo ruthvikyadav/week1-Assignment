@@ -3,7 +3,7 @@ package com.pattern.observer.impl;
 import com.pattern.message.Message;
 import com.pattern.observer.Observer;
 
-public class ThirdMessageSubscriber implements Observer 
+public class ThirdSubscriber implements Observer 
 {
     @Override
     public void updateObserver(Message message) {
