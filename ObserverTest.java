@@ -2,9 +2,9 @@ package com.pattern.client;
 
 import com.pattern.message.Message;
 
-import com.pattern.observer.impl.FirstMessageSubscriber;
-import com.pattern.observer.impl.SecondMessageSubscriber;
-import com.pattern.observer.impl.ThirdMessageSubscriber;
+import com.pattern.observer.impl.FirstSubscriber;
+import com.pattern.observer.impl.SecondSubscriber;
+import com.pattern.observer.impl.ThirdSubscriber;
 import com.pattern.subject.impl.MessagePublisher;
 
 
