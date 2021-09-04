@@ -12,9 +12,9 @@ public class ObserverTest {
 
 	public static void main(String[] args) {
 		
-		FirstMessageSubscriber firstSubscriber = new FirstMessageSubscriber();
-		SecondMessageSubscriber secondSubscriber = new SecondMessageSubscriber();
-		ThirdMessageSubscriber thirdSubscriber = new ThirdMessageSubscriber();
+		FirstSubscriber firstSubscriber = new FirstSubscriber();
+		SecondSubscriber secondSubscriber = new SecondSubscriber();
+		ThirdSubscriber thirdSubscriber = new ThirdSubscriber();
 
 		MessagePublisher messagePublisher = new MessagePublisher();
 
